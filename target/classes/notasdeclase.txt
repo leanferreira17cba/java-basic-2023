@@ -1,0 +1,7 @@
+como comentar en java
+
+/*
+
+*/
+
+comentario
