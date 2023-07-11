@@ -11,9 +11,9 @@ class Principal {
 
         // con la palabra reservada "new" creamos una nueva instancia
 
-        Telefono objetoTelefono = new Telefono();
-        Telefono objetoTelefono2 = new Telefono();
-        Telefono objetoTelefono3 = new Telefono();
+        Telefono objetoTelefonoSamsung = new Telefono(); // operador de asignacion =
+        Telefono objetoTelefono2 = null; // declarado -> no está instanciado o inicializado // null -> no contiene nada
+        Telefono objetoTelefonoNokia = new Telefono();
 
         // System.out.println() es un método que nos permite imprimir en pantalla información
 
@@ -21,7 +21,14 @@ class Principal {
            instancia.metodo()
         */
 
-        System.out.println(objetoTelefono3.getColor());
+        /*
+        objetoTelefono.setColor("verde");
+        objetoTelefono.setColor("rosa");
+
+        objetoTelefono.setNuevo(false);
+        */
+
+        System.out.println(objetoTelefonoNokia.getPrecio());
     }
 
 }
