@@ -13,7 +13,9 @@ class Principal {
 
         Telefono objetoTelefonoSamsung = new Telefono(); // operador de asignacion =
         Telefono objetoTelefono2 = null; // declarado -> no está instanciado o inicializado // null -> no contiene nada
-        Telefono objetoTelefonoNokia = new Telefono();
+
+        Telefono objetoTelefonoNokia = new Telefono("Nokia", 23D);
+
 
         // System.out.println() es un método que nos permite imprimir en pantalla información
 
@@ -28,7 +30,7 @@ class Principal {
         objetoTelefono.setNuevo(false);
         */
 
-        System.out.println(objetoTelefonoNokia.getPrecio());
+        System.out.println(objetoTelefonoNokia.enviarMensaje("ya llegué"));
     }
 
 }
