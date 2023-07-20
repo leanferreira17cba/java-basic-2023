@@ -8,7 +8,7 @@ public class Telefono {
     private double peso; // declarado
     private char tipoDeConsumo;
     private String modelo;
-    private float precio; // valor por default 0.0
+    private float precio; // esta expresado en dolares
     private float tamano;
     private boolean usado; // false
     private boolean nuevo; // false
@@ -37,7 +37,7 @@ public class Telefono {
     public Telefono() {
     }
 
-    public Telefono(double peso, String color) { //sobrecarga de constructor
+    public Telefono(double peso, String color) { // sobrecarga de constructor
         this.color = color;
         this.peso = peso;
     }
@@ -52,6 +52,10 @@ public class Telefono {
         this.color = color;
         this.peso = peso;
         this.stock = stock;
+    }
+
+    public Telefono(float precio) {
+        this.precio = precio;
     }
 
     public double getPeso() {
@@ -125,6 +129,12 @@ public class Telefono {
 
     public void reiniciar() {
         System.out.println("Se reinicia el telefono...");
+    }
+
+    // quiero saber el precio del telefono en pesos dada la cotizacion del dolar blue
+
+    public float calcularPrecioEnPesos(float valorDolarBlue) {
+        return precio * valorDolarBlue;
     }
 
 }
