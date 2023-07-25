@@ -1,6 +1,7 @@
 package application;
 
 
+import herencia.Madre;
 import modelos.Telefono;
 
 class Principal {
@@ -22,6 +23,7 @@ class Principal {
 
         // dolar blue 525
         float dolarBlue = 525F;
+
 
         float valorEnPesos = objetoTelefonoNokia.calcularPrecioEnPesos(dolarBlue);
 
