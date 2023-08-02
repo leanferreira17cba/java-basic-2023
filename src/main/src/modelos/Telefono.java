@@ -1,6 +1,8 @@
 package modelos;
 
-public class Telefono {
+import interfaces.Vendible;
+
+public class Telefono implements Vendible {
     // una clase o tipo está compuesta por: atributos (características, variables) y metodos (acciones)
 
     // dentro de los metodos mas comunmente utilizados se encuentran los "mutators" -> getters y setters
@@ -9,6 +11,8 @@ public class Telefono {
     private char tipoDeConsumo;
     private String modelo;
     private float precio; // esta expresado en dolares
+
+    private float precioEnEfectivo;
     private float tamano;
     private boolean usado; // false
     private boolean nuevo; // false
@@ -137,4 +141,21 @@ public class Telefono {
         return precio * valorDolarBlue;
     }
 
+    @Override
+    public float conocerPrecioEnEfectivo() {
+        // implementar ese comportamiento
+        // guarde en una variable cuando se consulta el precio en cash
+
+        this.precioEnEfectivo = this.precio - 20000;
+
+        return precioEnEfectivo;
+    }
+
+    @Override
+    public boolean vender(String comprador, float montoPagado) {
+        float precioEnEfectivo = conocerPrecioEnEfectivo();
+        System.out.println("El comprador es: " + comprador);
+
+        return montoPagado >= precioEnEfectivo;
+    }
 }
