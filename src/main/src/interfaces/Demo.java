@@ -14,8 +14,9 @@ public class Demo {
         System.out.println("El precio en efectivo es: " + telefonoNokia.conocerPrecioEnEfectivo());
 
         // quiero comprarlo y me llamo Luis
-        System.out.println("El telefono fue vendido: " +
-                telefonoNokia.vender("Luis", 80000));
+        System.out.println("El telefono fue vendido a " +
+                telefonoNokia.vender("Luis", 80000) + "utilizando el medio de pago: "
+        + Vendible.MEDIO_DE_PAGO);
 
         Auto auto = new Auto();
         auto.setPrecio(4000000);
