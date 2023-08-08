@@ -4,6 +4,13 @@ import interfaces.Vendible;
 
 public class Auto implements Vendible {
 
+    public int indice = 0;
+    private float[] historial = new float[10];
+
+    public float[] getHistorial() {
+        return this.historial;
+    }
+
     private float precio;
 
     public float getPrecio() {
@@ -11,6 +18,7 @@ public class Auto implements Vendible {
     }
 
     public void setPrecio(float precio) {
+        historial[indice++] = precio;
         this.precio = precio;
     }
 

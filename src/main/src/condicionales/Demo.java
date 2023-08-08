@@ -18,6 +18,8 @@ public class Demo {
         if (edad >= edadMinimaParaRecibirCarnetDeConducir) { // 12 mayor o igual a 18 años -> false
             System.out.println("Si, tome su carnet");
         } else {
+            // print
+            // llamar a cierto metodo, ejecutar algun bloque de codigo, etc...
             System.out.println("No se le otorga el carnet por ser menor de 18 años");
         }
 
